@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import AuthPage from './components/AuthPage';
-import HomePage from './components/HomePage';
-import ProfilePage from './components/ProfilePage';
+import AuthPage from './login/AuthPage';
+import HomePage from './home/HomePage';
+import ProfilePage from './profile/ProfilePage';
 import { supabase } from './supabaseClient';
 
 function App() {
