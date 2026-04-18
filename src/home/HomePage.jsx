@@ -420,14 +420,23 @@ const HomePage = () => {
                   <h3 className="text-white font-bold text-[17px] leading-tight">{card.title}</h3>
                   <p className="text-[#8F9BAC] text-[13px] leading-relaxed flex-1">{card.desc}</p>
 
-                  {/* Buton — şimdilik pasif */}
-                  <button
-                    disabled
-                    title="Yakında aktif olacak"
-                    className="mt-1 w-full py-2.5 rounded-xl text-[13px] font-semibold bg-white/5 text-gray-500 border border-white/5 cursor-not-allowed select-none"
-                  >
-                    Yakında Aktif
-                  </button>
+                  {/* Buton */}
+                  {card.route === '/saglik-takip' ? (
+                    <button
+                      onClick={() => navigate(card.route)}
+                      className="mt-1 w-full py-2.5 rounded-xl text-[13px] font-bold bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-black shadow-[0_0_15px_rgba(45,212,191,0.2)] hover:shadow-[0_0_25px_rgba(45,212,191,0.4)] transition-all duration-300 hover:scale-[1.02]"
+                    >
+                      Hemen Başla
+                    </button>
+                  ) : (
+                    <button
+                      disabled
+                      title="Yakında aktif olacak"
+                      className="mt-1 w-full py-2.5 rounded-xl text-[13px] font-semibold bg-white/5 text-gray-500 border border-white/5 cursor-not-allowed select-none"
+                    >
+                      Yakında Aktif
+                    </button>
+                  )}
                 </div>
               </div>
             ))}

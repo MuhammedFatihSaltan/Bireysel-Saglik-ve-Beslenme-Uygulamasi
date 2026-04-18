@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import AuthPage from './login/AuthPage';
 import HomePage from './home/HomePage';
 import ProfilePage from './profile/ProfilePage';
+import SaglikTakipPage from './saglik_takip/SaglikTakipPage';
 import { supabase } from './supabaseClient';
 
 function App() {
@@ -42,6 +43,10 @@ function App() {
         <Route 
           path="/profile" 
           element={session ? <ProfilePage /> : <Navigate to="/" replace />} 
+        />
+        <Route 
+          path="/saglik-takip" 
+          element={session ? <SaglikTakipPage /> : <Navigate to="/" replace />} 
         />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
