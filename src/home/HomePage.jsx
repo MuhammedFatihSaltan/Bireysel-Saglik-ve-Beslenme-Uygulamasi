@@ -356,10 +356,10 @@ const HomePage = () => {
                   <p className="text-[#8F9BAC] text-[13px] leading-relaxed flex-1">{card.desc}</p>
 
                   {/* Buton */}
-                  {card.route === '/saglik-takip' ? (
+                  {card.route === '/saglik-takip' || card.route === '/beslenme' ? (
                     <button
                       onClick={() => navigate(card.route)}
-                      className="mt-1 w-full py-2.5 rounded-xl text-[13px] font-bold bg-gradient-to-r from-[#0D9488] to-[#2DD4BF] text-black shadow-[0_0_15px_rgba(45,212,191,0.2)] hover:shadow-[0_0_25px_rgba(45,212,191,0.4)] transition-all duration-300 hover:scale-[1.02]"
+                      className={`mt-1 w-full py-2.5 rounded-xl text-[13px] font-bold bg-gradient-to-r ${card.color} text-black shadow-[0_0_15px_rgba(45,212,191,0.2)] hover:shadow-[0_0_25px_rgba(45,212,191,0.4)] transition-all duration-300 hover:scale-[1.02]`}
                     >
                       Hemen Başla
                     </button>

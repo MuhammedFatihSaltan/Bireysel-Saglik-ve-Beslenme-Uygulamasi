@@ -4,6 +4,7 @@ import AuthPage from './login/AuthPage';
 import HomePage from './home/HomePage';
 import ProfilePage from './profile/ProfilePage';
 import SaglikTakipPage from './saglik_takip/SaglikTakipPage';
+import BeslenmePlaniPage from './beslenme_plani/BeslenmePlaniPage';
 import { supabase } from './supabaseClient';
 
 function App() {
@@ -47,6 +48,10 @@ function App() {
         <Route 
           path="/saglik-takip" 
           element={session ? <SaglikTakipPage /> : <Navigate to="/" replace />} 
+        />
+        <Route 
+          path="/beslenme" 
+          element={session ? <BeslenmePlaniPage /> : <Navigate to="/" replace />} 
         />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
